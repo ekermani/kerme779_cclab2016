@@ -1,12 +1,13 @@
 // jquery variables 
 
 
-//click functions
-// $("#earth").click(function(){
-//     $("#end").css("display","block");
-//     console.log("clicked");
+// click functions
+$("#earth").click(function(){
+    $("#end").css("display","block");
+    console.log("clicked");
+    // playback
 
-// });
+});
 
 // $('#earth').animate({  borderSpacing: 360 }, {
 //   step: function(now,fy) {
