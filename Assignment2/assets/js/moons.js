@@ -5,6 +5,7 @@
 $("#earth").click(function(){
     $("#end").css("display","block");
     console.log("clicked");
+    $("#earth").css("display","none");
     // playback
 
 });
