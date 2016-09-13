@@ -1,12 +1,14 @@
-@import 'https://fonts.googleapis.com/css?family=Gochi+Hand';
+@import'https://fonts.googleapis.com/css?family=Poiret+One|Yatra+One';
 
 * { margin:0; padding:0;}
+
 body {
-	color: #000;
-	font-family: 'Gochi Hand', cursive;
+	color: #FFF;
+	font-family: 'Poiret One', sans-serif;
 	font-size:100%;
-	background: #9ad6ff;
+	background: #000000;
 }
+
 h1 {
 	margin-bottom: 30px;
 	font-size: 28pt;
@@ -17,48 +19,56 @@ h1 {
 	position:relative;
 	width:100%;
 	max-width: 500px;
-	height: calc(100vh - 60px);
+/*	height: calc(100vh - 60px);*/	
+	height: 400px;
 	margin: 30px auto;
 	padding: 0;
-	display: none;
+	background-color: red;
 }
 
-/* -- SUN/Center -- */
-#sun {
+h2 {
+/*	display: none;*/	
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	z-index: 2;
+}
+
+#earth {
 	display:block;
 	position:relative;
 	margin:0 auto;
-	border-radius: 50%;
-	width: 300px;
-	height: 300px; 
-/*	background: url('../img/face.png') no-repeat;
-*/	background-size:100% auto;
-	background-color: yellow;
+/*	border-radius: 50%;	*/	
+	width: 400px;
+	height: 400px; 
+	background: url('../img/earth.png') no-repeat;
+	background-size:100% auto;
 	z-index:1;
 }
-#eyes {
-	display:block;
-	position:absolute;
-	top:160px;
-	left:70px;
-	margin:0 auto;
-	width:50%;
-	height:20%;
-	background:url('../img/eyes.png') no-repeat;
-	background-size:100% auto;
-	z-index:2;
-}
-#beak {
-	display:block;
-	position:absolute;
-	top:210px;
-	left:25%;
-	margin: 0 auto;
-	width:50%;
-	height:32%;
-	background: url('../img/beak.png') no-repeat;
-	background-size: 100% auto;
-	z-index: 3;
+
+
+
+/*.moons {
+	position: relative;
+	width: 100%;
+	max-width: 500px;
+	margin: 30px auto;
+	background-color: red;
+	text-align: center;
+	padding: 20px;
+}*/
+
+.phases {
+	display: block;
+	width: 100%;
+	max-width: 500px;
+	height: 500px;
+	background-color: #FFF;
+	padding: 20px;
+	margin: 30px auto;
+	color: yellow;
+	text-align: center;
+
 }
 
 /* -- speech bubble -- */

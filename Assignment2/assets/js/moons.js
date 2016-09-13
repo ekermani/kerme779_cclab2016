@@ -1,9 +1,33 @@
+// jquery variables 
+
+
+//click functions
+// $("#earth").click(function(){
+//     $("#end").css("display","block");
+//     console.log("clicked");
+
+// });
+
+// $('#earth').animate({  borderSpacing: 360 }, {
+//   step: function(now,fy) {
+//     $(this).css('-webkit-transform','rotate('+now+'deg)'); 
+//     $(this).css('-moz-transform','rotate('+now+'deg)');
+//     $(this).css('transform','rotate('+now+'deg)');
+// },
+//   duration:'slow'
+// },'linear');
+
+
 // each moon
 var data = [
-  { "number": "100, 100", 
-    "label": "Full Moon", 
-    "fill": "#FFFFF"
-  }
+  [100,100],
+  [50,0],
+  [50,0],
+  [0,100],
+  // { "number": "100, 100", 
+  //   "label": "Full Moon", 
+  //   "fill": "#FFFFF"
+  // }
   // {"label": "Full Moon", "fill": "#FFFFF", "startAngle": 100, "endAngle":0},
   // {"label": "First Quarter", "fill": "red", "startAngle": 100, "endAngle":100},
   // {"label": "Third Quarter", "fill": "blue", "startAngle": 100, "endAngle":0},
