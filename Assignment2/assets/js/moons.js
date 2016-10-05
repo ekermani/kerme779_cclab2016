@@ -8,6 +8,8 @@ $("#earth").click(function(){
     $("#earth").css("display","none");
     // playback
 
+    //replaceWith, if statement
+
 });
 
 // $('#earth').animate({  borderSpacing: 360 }, {
