@@ -1,21 +1,25 @@
-// adapted from Daniel Schiffman's p5.js Muybridge style animation tutorial video 
+// adapted from Daniel Shiffman's p5.js Muybridge style animation tutorial video 
 
-var capture;
+var video;
 var button;
-var snapshots = [];
+var record;
+// var snapshots = [];
 // var counter = 0;
 // var total = 43;
 
 function setup() {
-    createCanvas(320, 240);
+    createCanvas(640, 480);
     background(51);
     // capture = createCapture(VIDEO, ready);
-    capture = createCapture(VIDEO);
+    video = createCapture(VIDEO);
 
-    capture.size(320, 240);
+    video.size(640, 480);
     //capture.hide();
-    button = createButton('snap');
+    button = createButton('System Ready');
     button.mousePressed(takesnap);
+    record = createButton('Save Image');
+    record.mousePressed(recorded);
+
 }
 
 // var go = false; 
@@ -25,17 +29,23 @@ function setup() {
 // }
 
 function takesnap() {
-    // image(capture,0,0);
-    snapshots.push(capture.get());
+    image(video,0,0);
+}
 
-//use as API?
+function recorded() {
+// saveFrames(filename,extension,_duration,_fps,callback)
+    saveFrames("image-","png", 3, 30);
 }
 
 function draw() {
+    tint(255, 50);
+    // image(video,0,0);
 
-  for (var i = 0; i < snapshots.length; i++) {
-    image(snapshots[i], 0, 0);
-    }
+    // snapshots.push(video.get());
+
+    // for (var i = 0; i < snapshots.length; i++) {
+        // image(snapshots[i], 0, 0, 50, 50);
+    // }
 
   // background(255);
   // image(capture, 0, 0, 720, 480);
@@ -55,7 +65,6 @@ function draw() {
 
   // 	  }
 }
-
 
 //   var w = 80;
 //   var h = 60;
@@ -77,6 +86,3 @@ function draw() {
 //   // filter('INVERT');
 //   // filter('')
 // }
-
-
-//mousepressed, save frame 
