@@ -2,36 +2,43 @@
 // Face Detection: https://kylemcdonald.github.io/cv-examples/FaceDetection/sketch.js
 // Drag and Drop: https://github.com/processing/p5.js-website-OLD/pull/80/commits/8a08568e7a147d03e32eb2ec6afe5281e7dee674
 
-var video;
+var capture;
 var button;
 var record;
 var ciel;
 var canvas;
 
-function setup() {
-
-    ciel = createImg("assets/ciel.png");
+function preload() {
+    // how do I make this image on top show camera???
+    ciel = createImg("assets/ciel2.png");
     // ciel.size();
     ciel.position(CENTER);
-    
-    canvas = createCanvas(640, 480);
-    background(0);
-    canvas.drop(gotFile);
-    // c.position();
-    video = createCapture(VIDEO);
 
-    video.size(640, 480);
-    //capture.hide();
-    button = createButton('System Ready');
-    button.mousePressed(takesnap);
-    record = createButton('Save Image');
-    record.mousePressed(recorded);
+}
+
+function setup() {
+    
+    canvas = createCanvas(680, 480);
+
+    // background(0);
+    canvas.drop(gotFile);
+    canvas.position(500,200);
+    capture = createCapture(VIDEO);
+
+    capture.size(640, 480);
+    // capture.position(50,150);
+    // capture.hide();
+    
+    // button = createButton('System Ready');
+    // button.mousePressed(takesnap);
+    // record = createButton('Save Image');
+    // record.mousePressed(recorded);
 
 }
 
 function draw() {
     tint(255,50);
-    fill(255);
+    // fill(255);
     noStroke();
     noLoop();
 
