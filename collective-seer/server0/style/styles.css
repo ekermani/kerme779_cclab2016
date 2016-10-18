@@ -1,25 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Alex+Brush|Pinyon+Script);
-        
-html, body {
+
+body {
     height: 100%;
     width: 100%;
     font-family: 'Pinyon Script', cursive;
     font-size: 1em;
-}
-
-body {
     margin: 0;
     padding: 0;
     display: flex;
+    background-color: gray;
 }
 
 #container {
     width: 100vw;
     height:100vh;
+    z-index: 0;
 }
 
 #sky {
-    background-image: url("/style/assets/ciel2.png");
+    background-image: url("/style/assets/ciel3.png");
     display: block;
     width: 100vw;
     height: 100vh;
@@ -36,7 +35,9 @@ h1 {
 
 #sketch-container {
     position: fixed;
-    z-index: -200;
+    z-index: 1;
+    margin-top: 293px;
+    margin-left: 500px;
 }
 
 #camera-container {
@@ -44,3 +45,10 @@ h1 {
     z-index: -250;
     margin-top: 293px;
 }
+
+#ciel {
+    background-image: url('/style/assets/clouds.jpg');
+    visibility: none;
+}
+
+

@@ -12,7 +12,6 @@ var sky;
 
 // function preload() {
 
-
 //     ciel = createImg("assets/ciel2.png");
 //     // ciel.size();
 //     ciel.position(CENTER);
@@ -21,15 +20,16 @@ var sky;
 
 function setup() {
     // background(0);
-    var canvas = createCanvas(windowWidth, windowHeight);
+    var canvas = createCanvas(320, 640);
     canvas.parent('sketch-container');
     // position relative to entire page
-    canvas.position(500,200);
-    canvas.drop(gotFile);
+    // canvas.position(0,0);
+    // canvas.drop(gotFile);
     
+    // right
     var capture = createCapture(VIDEO);
     capture.parent('camera-container');
-    capture.size(640, 480);
+    capture.size(640,480);
     // capture.position(50,150);
     // capture.hide();
     
@@ -43,28 +43,32 @@ function setup() {
 
 function draw() {
     tint(255,50);
-    // fill(255);
+    fill(150);
     noStroke();
     noLoop();
 // what's drawn on canvas - position is relative to canvas (versus dom)
 
 }
 
-function gotFile(file) {
-    if(file.type === 'image'){
-        var img = createImg(file.data).hide();
-        image(img, 0, 0, width, height);
-    } else {
-        println('Not an image');
+// function mousePressed() {
 
-    }
-}
+// }
 
-function takesnap() {
-    image(video,0,0);
-}
+// function gotFile(file) {
+//     if(file.type === 'image'){
+//         var img = createImg(file.data).hide();
+//         image(img, 0, 0, width, height);
+//     } else {
+//         println('Not an image');
 
-function recorded() {
-    save(0);
+//     }
+// }
 
-}
+// function takesnap() {
+//     image(video,0,0);
+// }
+
+// function recorded() {
+//     save(0);
+
+// }
