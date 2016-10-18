@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Alex+Brush|Pinyon+Script);
+        
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 2em;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+/*  justify-content: left;
+    align-items: left;*/
+
+}
+
+#container {
+    width: 100vw;
+    height:100vh;
+}
+
+#sky {
+    background-image: url("/style/assets/ciel2.png");
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+

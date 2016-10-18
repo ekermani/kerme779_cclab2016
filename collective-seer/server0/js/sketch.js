@@ -1,4 +1,4 @@
-// Video Capture: adapted from Daniel Shiffman's p5.js Muybridge style animation tutorial video 
+// Video Capture: p5 example
 // Face Detection: https://kylemcdonald.github.io/cv-examples/FaceDetection/sketch.js
 // Drag and Drop: https://github.com/processing/p5.js-website-OLD/pull/80/commits/8a08568e7a147d03e32eb2ec6afe5281e7dee674
 
@@ -8,23 +8,31 @@ var record;
 var ciel;
 var canvas;
 
-function preload() {
-    // how do I make this image on top show camera???
-    ciel = createImg("assets/ciel2.png");
-    // ciel.size();
-    ciel.position(CENTER);
+//html elements:
+// var h1;
+// var sky;
 
-}
+
+// function preload() {
+//     ciel = createImg("assets/ciel2.png");
+//     // ciel.size();
+//     ciel.position(CENTER);
+
+// }
 
 function setup() {
-    
-    canvas = createCanvas(680, 480);
-
     // background(0);
-    canvas.drop(gotFile);
-    canvas.position(500,200);
-    capture = createCapture(VIDEO);
 
+    canvas = createCanvas(680, 480);
+    // position relative to entire page
+    canvas.position(500,200);
+    canvas.drop(gotFile);
+
+    // h1 = createElement('h1', 'the cloud seer');
+    // // position relative to canvas
+    // h1.position();
+    
+    capture = createCapture(VIDEO);
     capture.size(640, 480);
     // capture.position(50,150);
     // capture.hide();
@@ -35,12 +43,14 @@ function setup() {
     // record.mousePressed(recorded);
 
 }
+// h1.html under mousePressed function can change the h1 content
 
 function draw() {
     tint(255,50);
-    // fill(255);
+    fill(255);
     noStroke();
     noLoop();
+// what's drawn on canvas - position is relative to canvas (versus dom)
 
 }
 
