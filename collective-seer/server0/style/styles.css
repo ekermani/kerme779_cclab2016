@@ -1,20 +1,20 @@
-@import url(https://fonts.googleapis.com/css?family=Alex+Brush|Pinyon+Script);
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Pinyon+Script');
 
 body {
     height: 100%;
     width: 100%;
     font-family: 'Pinyon Script', cursive;
-    font-size: 1em;
     margin: 0;
     padding: 0;
     display: flex;
-    background-color: gray;
+   /* background-color: gray;*/
 }
 
 #container {
     width: 100vw;
     height:100vh;
     z-index: 0;
+    font-size: 1em;
 }
 
 #sky {
@@ -44,11 +44,21 @@ h1 {
     position: fixed;
     z-index: -250;
     margin-top: 293px;
+    padding: 0;
 }
 
 #ciel {
     background-image: url('/style/assets/clouds.jpg');
-    visibility: none;
+    opacity: 0;
+    z-index: -251;
+}
+
+#ciel-text {
+    opacity: 0;    
+    font-size: 4em;
+    padding: 300px 300px;
+    z-index: -1;
+    text-transform: rotate -30deg;
 }
 
 

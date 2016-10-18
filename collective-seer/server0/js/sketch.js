@@ -4,11 +4,11 @@
 
 var button;
 var record;
-var ciel;
+// var ciel;
 
 //html elements:
 // var h1;
-var sky;
+// var sky;
 
 // function preload() {
 
@@ -42,17 +42,41 @@ function setup() {
 // h1.html under mousePressed function can change the h1 content
 
 function draw() {
-    tint(255,50);
-    fill(150);
+    // tint(255,50);
+    // fill(150);
     noStroke();
     noLoop();
 // what's drawn on canvas - position is relative to canvas (versus dom)
 
 }
 
-// function mousePressed() {
+function mousePressed() {
+    // boolean, target id of image div, change visibility
+    // putting elements in array
+    // 
+    // console.log("click");
+    var change = document.getElementById("ciel"); 
+    // console.log(change);
+    if(change.style.opacity = 1) {
+        change.style.opacity = 0;
+        console.log(change.style.opacity);
+    } else{
+        change.style.opacity = 1;
+        console.log(change.style.opacity);
+    }
 
-// }
+    // for (var i = 0; i > change.length; i++) {
+
+    //     if(change[i].style.opacity = 1) {
+    //         change[i].style.opacity = 0;
+    //         console.log("opacity = 0");
+    //     } else{
+    //         change[i].style.opacity = 1;
+    //         console.log("opacity = 0");
+    //     }
+    // };
+
+}
 
 // function gotFile(file) {
 //     if(file.type === 'image'){
