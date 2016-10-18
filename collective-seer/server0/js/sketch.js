@@ -2,18 +2,17 @@
 // Face Detection: https://kylemcdonald.github.io/cv-examples/FaceDetection/sketch.js
 // Drag and Drop: https://github.com/processing/p5.js-website-OLD/pull/80/commits/8a08568e7a147d03e32eb2ec6afe5281e7dee674
 
-var capture;
 var button;
 var record;
 var ciel;
-var canvas;
 
 //html elements:
 // var h1;
-// var sky;
-
+var sky;
 
 // function preload() {
+
+
 //     ciel = createImg("assets/ciel2.png");
 //     // ciel.size();
 //     ciel.position(CENTER);
@@ -22,17 +21,14 @@ var canvas;
 
 function setup() {
     // background(0);
-
-    canvas = createCanvas(680, 480);
+    var canvas = createCanvas(windowWidth, windowHeight);
+    canvas.parent('sketch-container');
     // position relative to entire page
     canvas.position(500,200);
     canvas.drop(gotFile);
-
-    // h1 = createElement('h1', 'the cloud seer');
-    // // position relative to canvas
-    // h1.position();
     
-    capture = createCapture(VIDEO);
+    var capture = createCapture(VIDEO);
+    capture.parent('camera-container');
     capture.size(640, 480);
     // capture.position(50,150);
     // capture.hide();
@@ -47,7 +43,7 @@ function setup() {
 
 function draw() {
     tint(255,50);
-    fill(255);
+    // fill(255);
     noStroke();
     noLoop();
 // what's drawn on canvas - position is relative to canvas (versus dom)
