@@ -18,7 +18,7 @@ body {
 }
 
 #sky {
-    background-image: url("/style/assets/ciel3.png");
+    background-image: url("/style/assets/ciel5.png");
     display: block;
     width: 100vw;
     height: 100vh;
@@ -37,7 +37,7 @@ h1 {
     position: fixed;
     z-index: 1;
     margin-top: 293px;
-    margin-left: 500px;
+    margin-left: 675px;
 }
 
 #camera-container {
@@ -47,18 +47,17 @@ h1 {
     padding: 0;
 }
 
-#ciel {
+/*#ciel {
     background-image: url('/style/assets/clouds.jpg');
-    opacity: 0;
-    z-index: -251;
-}
+/*    opacity: 0;*/
+/*    z-index: -251;*/}
 
-#ciel-text {
+/*#ciel-text {
     opacity: 0;    
     font-size: 4em;
     padding: 300px 300px;
     z-index: -1;
     text-transform: rotate -30deg;
-}
+}*/
 
 

@@ -4,39 +4,37 @@
 
 var button;
 var record;
-// var ciel;
-
-//html elements:
-// var h1;
-// var sky;
+var img;
+var capture;
 
 // function preload() {
-
-//     ciel = createImg("assets/ciel2.png");
-//     // ciel.size();
-//     ciel.position(CENTER);
-
+//     img = loadImage("/style/assets/clouds.jpg");
+//     // img.position(200,200);
 // }
+
 
 function setup() {
     // background(0);
-    var canvas = createCanvas(320, 640);
+    var canvas = createCanvas(480, 640);
     canvas.parent('sketch-container');
     // position relative to entire page
     // canvas.position(0,0);
     // canvas.drop(gotFile);
     
     // right
-    var capture = createCapture(VIDEO);
+    capture = createCapture(VIDEO);
     capture.parent('camera-container');
     capture.size(640,480);
     // capture.position(50,150);
     // capture.hide();
     
-    // button = createButton('System Ready');
-    // button.mousePressed(takesnap);
+    button = createButton('ciel');
+    button.position(100,100);
+    button.mousePressed(takesnap);
     // record = createButton('Save Image');
     // record.mousePressed(recorded);
+    // image(img, 0, 0);
+    // filter(OPAQUE, 0.5);
 
 }
 // h1.html under mousePressed function can change the h1 content
@@ -46,24 +44,31 @@ function draw() {
     // fill(150);
     noStroke();
     noLoop();
+
+
 // what's drawn on canvas - position is relative to canvas (versus dom)
 
 }
 
-function mousePressed() {
-    // boolean, target id of image div, change visibility
-    // putting elements in array
-    // 
+// function mousePressed() {
+//     // boolean, target id of image div, change visibility
+//     // putting elements in array
+//     // 
+//     image(img,0,0);
+
+//     console.log("click");
+
+// }
     // console.log("click");
-    var change = document.getElementById("ciel"); 
-    // console.log(change);
-    if(change.style.opacity = 1) {
-        change.style.opacity = 0;
-        console.log(change.style.opacity);
-    } else{
-        change.style.opacity = 1;
-        console.log(change.style.opacity);
-    }
+    // var change = document.getElementById("ciel"); 
+    // // console.log(change);
+    // if(change.style.opacity = 1) {
+    //     change.style.opacity = 0;
+    //     console.log(change.style.opacity);
+    // } else{
+    //     change.style.opacity = 1;
+    //     console.log(change.style.opacity);
+    // }
 
     // for (var i = 0; i > change.length; i++) {
 
@@ -76,7 +81,7 @@ function mousePressed() {
     //     }
     // };
 
-}
+
 
 // function gotFile(file) {
 //     if(file.type === 'image'){
@@ -88,9 +93,9 @@ function mousePressed() {
 //     }
 // }
 
-// function takesnap() {
-//     image(video,0,0);
-// }
+function takesnap() {
+    image(capture,0,0);
+}
 
 // function recorded() {
 //     save(0);
