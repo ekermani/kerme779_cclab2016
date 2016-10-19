@@ -98,7 +98,7 @@ function takesnap() {
     image(capture,0,0);
 }
 
-// function recorded() {
-//     save(0);
+function recorded() {
+    save();
 
-// }
+}
