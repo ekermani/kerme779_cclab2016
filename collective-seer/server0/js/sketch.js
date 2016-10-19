@@ -31,8 +31,9 @@ function setup() {
     button = createButton('ciel');
     button.position(100,100);
     button.mousePressed(takesnap);
-    // record = createButton('Save Image');
-    // record.mousePressed(recorded);
+    record = createButton('save');
+    record.position(100,120);
+    record.mousePressed(recorded);
     // image(img, 0, 0);
     // filter(OPAQUE, 0.5);
 
