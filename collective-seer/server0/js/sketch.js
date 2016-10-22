@@ -63,7 +63,7 @@ function draw() {
     // console.log("click");
     // var change = document.getElementById("ciel"); 
     // // console.log(change);
-    // if(change.style.opacity = 1) {
+    // if(change.style.opacity == 1) {
     //     change.style.opacity = 0;
     //     console.log(change.style.opacity);
     // } else{
