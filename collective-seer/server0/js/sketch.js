@@ -38,16 +38,12 @@ function setup() {
     // filter(OPAQUE, 0.5);
 
 }
-// h1.html under mousePressed function can change the h1 content
 
 function draw() {
     // tint(255,50);
     // fill(150);
     noStroke();
     noLoop();
-
-
-// what's drawn on canvas - position is relative to canvas (versus dom)
 
 }
 
@@ -81,8 +77,6 @@ function draw() {
     //         console.log("opacity = 0");
     //     }
     // };
-
-
 
 // function gotFile(file) {
 //     if(file.type === 'image'){
