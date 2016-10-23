@@ -1,17 +1,10 @@
 // Video Capture: p5 example
 // Face Detection: https://kylemcdonald.github.io/cv-examples/FaceDetection/sketch.js
-// Drag and Drop: https://github.com/processing/p5.js-website-OLD/pull/80/commits/8a08568e7a147d03e32eb2ec6afe5281e7dee674
 
 var button;
 var record;
 var img;
 var capture;
-
-// function preload() {
-//     img = loadImage("/style/assets/clouds.jpg");
-//     // img.position(200,200);
-// }
-
 
 function setup() {
     // background(0);
@@ -19,14 +12,12 @@ function setup() {
     canvas.parent('sketch-container');
     // position relative to entire page
     // canvas.position(0,0);
-    // canvas.drop(gotFile);
     
     // right
     capture = createCapture(VIDEO);
     capture.parent('camera-container');
-    capture.size(640,480);
+    // capture.size(800,600);
     // capture.position(50,150);
-    // capture.hide();
     
     button = createButton('ciel');
     button.position(100,100);
@@ -34,14 +25,10 @@ function setup() {
     record = createButton('save');
     record.position(100,120);
     record.mousePressed(recorded);
-    // image(img, 0, 0);
-    // filter(OPAQUE, 0.5);
 
 }
 
 function draw() {
-    // tint(255,50);
-    // fill(150);
     noStroke();
     noLoop();
 
